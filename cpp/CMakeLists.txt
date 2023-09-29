@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.0)
+project(bored)
+
+find_package(SDL2 REQUIRED)
+find_library(SDL2_LIBRARY NAME SDL2)
+add_executable(bored bored.cpp)
+# include_directories(bored ${SDL2_INCLUDE_DIRS})
+# target_link_libraries(bored ${SDL2_LIBRARIES})
+include_directories(${SDL2_INCLUDE_DIRS})
+target_link_libraries(bored ${SDL2_LIBRARIES})
